@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit A Landmark</title>
+  </head>
+  <body>
+    <form class="" action="/landmarks/<%=@landmark.id%>/edit" method="post">
+      <label>Name:</label><input type="text" name="landmark[name]" value="" id="name" value="<%=@landmark.name%>">
+      <label>Year Completed:</label><input type="text" name="landmark[year_completed]" value="" id="year_completed" value="<%=@landmark.year_completed%>">
+
+    <!-- </br></br>Title:</br>
+      <%Title.all.each do |title|%>
+        <label><%=title.name%>:</label><input type="checkbox" name="figure[title_ids][]" value="<%=title.id%>" id="title_<%=title.id%>"></br>
+      <%end%>
+    <label>New Title:</label> <input type="text" name="new_title" value="" id=title[name]></br>
+    </br>Landmark:</br>
+      <%Landmark.all.each do |landmark|%>
+        <label><%=landmark.name%>:</label><input type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.id%>" id="landmark_<%=landmark.id%>"></br>
+      <%end%>
+      <label>New Landmark:</label> <input type="text" name="new_landmark" value="" id=landmark[name]></br> -->
+      <input type="hidden" name="_method" value="patch">
+      <input type="submit" name="Edit Landmark" value="Edit Landmark">
+    </form>
+  </body>
+</html>
